@@ -132,6 +132,60 @@ footer {
 }
 /* ***************************** FOOTER END ***************************** */
 
+
+/* ***************************** MEDIA QUERIES***************************** */
+
+
+@media screen and (min-device-width: 768px) {
+  .one-third {
+    width: 32%;
+  }
+  .photo-grid{
+  text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .m-meme h1 {
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+    font-size: 50px;
+    line-height: 0px;
+    padding-top: 50px;
+  }
+
+  .header h2 {
+    font-family: 'Josefin Slab', serif;
+    padding-bottom: 20px;
+  }
+
+  .one-third {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .m-meme h1 {
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+    font-size: 30px;
+    line-height: 0px;
+    padding-top: 50px;
+  }
+
+  .header h2 {
+    font-family: 'Josefin Slab', serif;
+    padding-bottom: 14px;
+    font-size: 20px;
+  }
+
+  .one-third {
+    width: 100%;
+  }
+}
+
+/* ********************************************************** */
+
 body.noselect {
   @include user-select(none);
 }
