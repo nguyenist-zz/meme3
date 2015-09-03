@@ -123,13 +123,51 @@ footer {
   width: 100%;
   font-size: 20px;
   display: inline-block;
-  height: 70px;
+  height: 120px;
   background-color: #000;
-  text-align: center;
   color: white;
   font-size: 16px;
   line-height: 45px;
+  overflow: hidden;
+  float: left;
+  line-height: 1.6em;
 }
+
+ul { 
+  margin-top:20px; 
+  padding:0;
+  margin-left:20px;
+}
+
+ul li { 
+  float:left; 
+  list-style:none; 
+}
+
+ul li:after {
+  content:"·"; 
+  color:#666;
+}
+
+ul li:last-child:after { 
+  content:""; 
+  /* No separator for the last item in the list */ }
+
+ul li a {
+ margin:0 8px; /* Set margins around the links */
+ color:white; /* Text colors for the links */
+}
+
+footer p{
+  text-align: center;
+}
+
+.footer-right img{
+  width: 30px;
+  float: right;
+  margin: 0px 10px 0px 10px;
+}
+
 /* ***************************** FOOTER END ***************************** */
 
 
