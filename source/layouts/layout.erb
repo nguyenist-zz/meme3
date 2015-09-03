@@ -5,9 +5,13 @@
   </head>
   <body class="<%= page_classes %>">
     <div class="m-meme">
+      <div class="header">
       <h1>Share Your #FierceFall Goal</h1>
       <h2>Set your sights for a big season of change, like a boss!</h2>
+      </div>
+      <div class="editor-class">
       <%= partial "partials/editor" %>
+      </div>
       <%= partial "partials/canvas" %>
     </div>
     <%= javascript_include_tag 'application' %>
@@ -33,7 +37,7 @@
 
     <footer>
   <div class="copyright">
-    <p>2015 - Bossed Up LLC</p>
+    <p>©2015 Bossed Up LLC</p>
   </div>
   </footer>
 </html>
