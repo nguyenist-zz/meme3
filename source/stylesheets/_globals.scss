@@ -31,10 +31,17 @@ body {
   width: 100%;
 }
 
-h1{
+.m-meme h1 {
   font-family: 'Josefin Slab', serif;
   text-align: center;
-  font-size: 50px;
+  font-size: 60px;
+  line-height: 0px;
+  padding-top: 50px;
+}
+
+.m-meme h2 {
+  font-family: 'Josefin Slab', serif;
+  padding-bottom: 30px;
 }
 
 form h2 {
