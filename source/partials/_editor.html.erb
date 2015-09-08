@@ -1,46 +1,5 @@
 <link href='https://fonts.googleapis.com/css?family=Average+Sans' rel='stylesheet' type='text/css'>
-<script>
-$(function() {
-  
-  $('#dropzone').on('dragover', function() {
-    $(this).addClass('hover');
-  });
-  
-  $('#dropzone').on('dragleave', function() {
-    $(this).removeClass('hover');
-  });
-  
-  $('#dropzone input').on('change', function(e) {
-    var file = this.files[0];
 
-    $('#dropzone').removeClass('hover');
-    
-    if (this.accept && $.inArray(file.type, this.accept.split(/, ?/)) == -1) {
-      return alert('File type not allowed.');
-    }
-    
-    $('#dropzone').addClass('dropped');
-    $('#dropzone img').remove();
-    
-    if ((/^image\/(gif|png|jpeg)$/i).test(file.type)) {
-      var reader = new FileReader(file);
-
-      reader.readAsDataURL(file);
-      
-      reader.onload = function(e) {
-        var data = e.target.result,
-            $img = $('<img />').attr('src', data).fadeIn();
-        
-        $('#dropzone div').html($img);
-      };
-    } else {
-      var ext = file.name.split('.').pop();
-      
-      $('#dropzone div').html(ext);
-    }
-  });
-});
-</script>
 
 <style>
 #dropzone {
@@ -137,4 +96,47 @@ $(function() {
       <li><label><input type="radio" name="overlay" value=""> None</label></li>
     </ul>
   </div> -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript">
+
+$(document).ready(function () {
+  $('#dropzone').on('dragover', function() {
+    $(this).addClass('hover');
+  });
+  
+  $('#dropzone').on('dragleave', function() {
+    $(this).removeClass('hover');
+  });
+  
+  $('#dropzone input').on('change', function(e) {
+    var file = this.files[0];
+
+    $('#dropzone').removeClass('hover');
+    
+    if (this.accept && $.inArray(file.type, this.accept.split(/, ?/)) == -1) {
+      return alert('File type not allowed.');
+    }
+    
+    $('#dropzone').addClass('dropped');
+    $('#dropzone img').remove();
+    
+    if ((/^image\/(gif|png|jpeg)$/i).test(file.type)) {
+      var reader = new FileReader(file);
+
+      reader.readAsDataURL(file);
+      
+      reader.onload = function(e) {
+        var data = e.target.result,
+            $img = $('<img />').attr('src', data).fadeIn();
+        
+        $('#dropzone div').html($img);
+      };
+    } else {
+      var ext = file.name.split('.').pop();
+      
+      $('#dropzone div').html(ext);
+    }
+  });
+});
+</script>
 </form>
