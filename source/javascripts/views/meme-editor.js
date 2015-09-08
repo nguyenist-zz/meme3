@@ -83,6 +83,7 @@ MEME.MemeEditorView = Backbone.View.extend({
     'drop #dropzone': 'onZoneDrop'
   },
 
+
   onCredit: function() {
     this.model.set('creditText', this.$('#credit').val());
   },

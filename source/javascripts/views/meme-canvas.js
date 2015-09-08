@@ -105,6 +105,8 @@ MEME.MemeCanvasView = Backbone.View.extend({
       }
 
       var words = d.headlineText.split(' ');
+
+      var words = d.headlineText.split(' ');
       var line  = '';
 
       for (var n = 0; n < words.length; n++) {
