@@ -21,6 +21,11 @@
 .m-webcam{margin-bottom:30px}
 .m-webcam video{display:none}
 
+
+input[type="submit"]{
+background-color:#c52126
+}
+
 body {
   background-color: #fff;
   color: $default-text-color;
@@ -207,10 +212,10 @@ footer p{
 @media screen and (max-width: 480px) {
   .m-meme h1 {
     font-family: 'Josefin Slab', serif;
-    text-align: center;
-    font-size: 25px;
-    line-height: 0px;
-    padding-top: 50px;
+    font-size: 40px;
+    display: inline-block;
+    line-height: 1.5;
+    padding: 0px;
   }
 
   .header h2 {
