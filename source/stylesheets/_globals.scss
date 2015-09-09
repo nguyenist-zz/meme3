@@ -194,9 +194,10 @@ footer p{
   .m-meme h1 {
     font-family: 'Josefin Slab', serif;
     text-align: center;
-    font-size: 50px;
-    line-height: 0px;
+    font-size: 40px;
+    line-height: 1.5;
     padding-top: 50px;
+    margin: 0px;
   }
 
   .header h2 {
@@ -216,6 +217,7 @@ footer p{
     display: inline-block;
     line-height: 1.5;
     padding: 0px;
+    margin: 0px;
   }
 
   .header h2 {
@@ -248,7 +250,6 @@ footer p{
   footer p{
   font-size: 12px;
   }
-
 }
 
 /* ********************************************************** */
