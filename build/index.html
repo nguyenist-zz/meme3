@@ -6,7 +6,7 @@
 <!-- Always force latest IE rendering engine or request Chrome Frame -->
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <title>Bossed Up Fierce Fall Campaign</title>
-<link href="/stylesheets/main-45adac2d.css" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/main-9d2a69b8.css" rel="stylesheet" type="text/css" />
 <meta name="description" content="" />
 
   </head>
@@ -23,6 +23,7 @@
 
 
   <div class="dropzone" id="dropzone"><div class="dropzone-text">Drop Image or Tap to Upload</div><input type="file" accept="image/*" id="loadinput"></input></div>
+  <p class="m-canvas__download-note">For best results: If uploading from mobile device, please use square photo.</p>
 
 </br>
   
@@ -76,48 +77,6 @@
     </ul>
   </div> -->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript">
-
-$(document).ready(function () {
-  $('#dropzone').on('dragover', function() {
-    $(this).addClass('hover');
-  });
-  
-  $('#dropzone').on('dragleave', function() {
-    $(this).removeClass('hover');
-  });
-  
-  $('#dropzone input').on('change', function(e) {
-    var file = this.files[0];
-
-    $('#dropzone').removeClass('hover');
-    
-    if (this.accept && $.inArray(file.type, this.accept.split(/, ?/)) == -1) {
-      return alert('File type not allowed.');
-    }
-    
-    $('#dropzone').addClass('dropped');
-    $('#dropzone img').remove();
-    
-    if ((/^image\/(gif|png|jpeg)$/i).test(file.type)) {
-      var reader = new FileReader(file);
-
-      reader.readAsDataURL(file);
-      
-      reader.onload = function(e) {
-        var data = e.target.result,
-            $img = $('<img />').attr('src', data).fadeIn();
-        
-        $('#dropzone div').html($img);
-      };
-    } else {
-      var ext = file.name.split('.').pop();
-      
-      $('#dropzone div').html(ext);
-    }
-  });
-});
-</script>
 </form>
 
       </div>
