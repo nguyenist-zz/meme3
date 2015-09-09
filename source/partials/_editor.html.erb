@@ -9,6 +9,11 @@
   height: 150px;
   text-align: center;
   width: 100%;
+  font-size: 20px;
+}
+
+.dropzone-text{
+  bottom: 20px;
 }
 
 #dropzone.hover {
@@ -23,7 +28,7 @@
 
 #dropzone div {
   position: absolute;
-  top: 0;
+  top: 25px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -49,7 +54,7 @@
 <form class="m-editor" id="meme-editor-view">
 
 
-  <div class="dropzone" id="dropzone">Drop Image or Tap to Upload Here<input type="file" accept="image/*" id="loadinput"></input></div>
+  <div class="dropzone" id="dropzone"><div class="dropzone-text">Drop Image or Tap to Upload Here</div><input type="file" accept="image/*" id="loadinput"></input></div>
 
 </br>
   
