@@ -153,6 +153,21 @@ MEME.MemeEditorView = Backbone.View.extend({
     if (input.files && input.files[0]) {
       this.model.loadBackground(input.files[0]);
       this.$('#dropzone').removeClass('pulse');
-    }
+
+      var exif = EXIF.readFromBinaryFile(new BinaryFile(this.result));
+
+      switch(exif.Orientation){
+
+         case 8:
+             ctx.rotate(90*Math.PI/180);
+             break;
+         case 3:
+             ctx.rotate(180*Math.PI/180);
+             break;
+         case 6:
+             ctx.rotate(-90*Math.PI/180);
+             break;
+           }
+        }
   }
 });
